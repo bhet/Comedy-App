@@ -1,0 +1,30 @@
+{
+  "name": "q2-group-project-requirements",
+  "version": "1.0.0",
+  "description": "The goal of this project is to put what you've learned to use to:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhet/q2-group-project-requirements.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhet/q2-group-project-requirements/issues"
+  },
+  "homepage": "https://github.com/bhet/q2-group-project-requirements#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-session-knex": "^1.4.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "knex": "^0.15.1",
+    "pg": "^7.4.3"
+  }
+}
