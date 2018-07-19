@@ -10,14 +10,19 @@
 <body>
 
   <nav class="navbar navbar-inverse">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+    <div class="navbar-header">
+      <div class="start-up">
+        <p>start-up</p>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="/comedy">Home</a></li>
-        <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+      <div class="comedy">
+        <p>COMEDY</p>
+      </div>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="/comedy">Home</a></li>
+      <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </nav>
 
   <div class="container skit-div">
@@ -26,10 +31,14 @@
         <iframe width="560" height="315" src="<%= skits[i].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <!-- <h4><%=skits[i].title%></h4> -->
         <a href="/comment/<%= skits[i].id %>" style="color:green;"><%=skits[i].title%></a>
+        <!-- <h4><%=skits[i].title%></h4>
+        <a href="/comment/<%= skits[i].id %>">
+          <%=skits[i].title%>
+        </a> -->
       </div>
       <%}%>
   </div>
-  
+
 </body>
 
 </html>

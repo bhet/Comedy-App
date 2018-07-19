@@ -1,0 +1,17 @@
+.container-top {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+.start-up {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.comedy {
+  /* display: flex;
+  justify-content: center; */
+}
