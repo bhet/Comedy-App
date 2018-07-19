@@ -4,12 +4,17 @@ body{
 }
 
 .navbar {
+  display: flex;
   background-color: green;
   height: 5em;
-  display: flex;
+
+
 
 }
 .navbar-header{
+  display: flex;
+  align-items: center;
+  justify-content: ;
   margin-left: 2em;
   margin-top:25px;
 }
@@ -43,10 +48,34 @@ a{
 
 
 li{
+  justify-content: center;
   flex:1;
 }
 
 .glyphicon{
 
   padding-right: 5em;
+}
+
+
+
+.start-up p {
+  font-size: 30pt;
+  font-family: 'orange juice';
+  color: orange;
+}
+
+.comedy p {
+  font-size: 60pt;
+  font-family: 'Remained';
+  color: yellow;
+  padding-left: .25em;
+}
+
+.skit-div {
+  margin-left: 1em;;
+}
+
+.sign-up {
+  
 }

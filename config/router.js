@@ -6,6 +6,7 @@ module.exports = function(app){
 
   app.get('/home', homepage.getHomePage);
 
+// route for comment page, where anomyous can post comment.
   app.get(`/comment/:skit_id`, ()=>{})
 
 
