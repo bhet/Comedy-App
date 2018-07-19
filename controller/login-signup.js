@@ -12,6 +12,8 @@ module.exports = {
     res.render('signup')
   },
 
+  
+
   protectedLogin: function(req, res){
     knex('skits').where('artist_id', req.session.comedian.id)
     .then((result)=>{

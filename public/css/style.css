@@ -35,15 +35,12 @@ a{
   color: white;
   box-sizing: border-box;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #21e47000;
   text-align: center;
   justify-content: center;
 }
 
-.active {
 
-  /* padding-right: 25em; */
-}
 
 li{
   flex:1;
