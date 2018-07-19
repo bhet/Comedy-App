@@ -1,0 +1,55 @@
+body{
+  margin: auto;
+
+}
+
+.navbar {
+  background-color: green;
+  height: 5em;
+  display: flex;
+
+}
+.navbar-header{
+  margin-left: 2em;
+  margin-top:25px;
+}
+.nav li{
+  margin-top:10px;
+}
+
+.navbar-right{
+  flex:1;
+}
+
+.navbar-nav{
+  display: flex;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+
+}
+a{
+  text-decoration: none;
+  width: 3em;
+  color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+}
+
+.active {
+
+  /* padding-right: 25em; */
+}
+
+li{
+  flex:1;
+}
+
+.glyphicon{
+
+  padding-right: 5em;
+}
