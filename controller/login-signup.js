@@ -25,7 +25,7 @@ module.exports = {
     knex('artists').where('email', req.body.email)
     .then((result)=>{
       let comedian = result[0];
-      
+
       if(comedian.password === req.body.password){
         req.session.comedian = comedian;
         req.session.save(()=>{
@@ -37,27 +37,21 @@ module.exports = {
     })
   },
 
-
-
-  // createComedianProfile: function(req, res){
-  //   knex('skits').insert({
-  //     fullname: req.body.fullname,
-  //     age: req.body.age,
-  //     city: req.body.city,
-  //     bio: req.body.bio,
-  //     email: req.body.email,
-  //     password: req.body.password
-  //   }).then(()=>{
-  //     res.redirect(`/comedian/${}`)
-  //   })
-  // },
-  //
-  // getComedian: function(req,res){
-  //   knex(skits).where('id', req.params.id).then((result)=>{
-  //     res.render('comedianSignup', {comedian: result})
-  //   })
-  // }
-
+  createComedianProfile: function(req, res){
+    knex('artists').insert({
+      fullname: req.body.fullname,
+      age: req.body.age,
+      city: req.body.city,
+      bio: req.body.bio,
+      email: req.body.email,
+      password: req.body.password
+    }, '*').then((comedian)=>{
+      req.session.comedian = comedian[0];
+      req.session.save(()=>{
+        res.redirect(`/comedian`)
+      })
+    })
+  },
 
 
 }

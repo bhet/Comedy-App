@@ -1,13 +1,14 @@
 const knex = require('../db/knex');
 const homepage = require('../controller/homepage');
 const loginSignup = require('../controller/login-signup');
+const commentSkits = require('../controller/commentPostskitsPost');
 
 module.exports = function(app){
 
   app.get('/home', homepage.getHomePage);
 
 // route for comment page, where anomyous can post comment.
-  app.get(`/comment/:skit_id`, ()=>{})
+  app.get(`/comment/:skit_id`, commentSkits.getComment)
 
 
   //route for website information: what is about and why it exist and for whom
@@ -20,21 +21,15 @@ module.exports = function(app){
   app.get('/signup', loginSignup.getSignup);
 
   //post request route from  login page that takes to Comedian Personal page.
-  //app.post(`/comedian/:id`, loginSignup.createLoginPost)
+  app.use(protectlogin);
+  app.get(`/comedian`, loginSignup.protectedLogin);
   app.post(`/comedian`, loginSignup.createLoginPost);
 
-  //router from signup page to singned up individual action_page
-  // app.get('/comedian/:id', loginSignup.getComedian);
-  // app.post('/comedian/:id', loginSignup.createComedianProfile)
+  //post router from signup page to singned up individual action_page
 
+  app.post('/register/comedian', loginSignup.createComedianProfile)
 
-
-//Protectesd login route and middleware to protected login with authentication.
-//get request for comedian personal page
-  app.use(protectlogin);
-  app.get(`/comedian`, loginSignup.protectedLogin)
-  //app.get(`/comedian`, loginSignup.protectedLogin)
-
+  app.get('/comedy', commentSkits.getComedypage);
 }
 
 function protectlogin(req, res, next){

@@ -24,16 +24,12 @@
     <%for(let i = 0; i < skits.length; i++){%>
       <div class="skit-div">
         <iframe width="560" height="315" src="<%= skits[i].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <h4><%=skits[i].title%></h4>
-        <a href="/comment/<%= skits[i].id %>"><%=skits[i].title%></a>
+        <!-- <h4><%=skits[i].title%></h4> -->
+        <a href="/comment/<%= skits[i].id %>" style="color:green;"><%=skits[i].title%></a>
       </div>
       <%}%>
   </div>
-
-
-
-
-  </iframe>
+  
 </body>
 
 </html>
