@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/static/css/style.css">
   </head>
   <body>
-    <h1><%=comedian.name%>, Welcome to the Comedy World!</h1>
-    <p>Here are your </p>
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/comedy">Home</a></li>
+
+        </ul>
+    </nav>
+    <h1><%=comedian.fullname%>, Welcome to the Comedy World!</h1>
+    <p>Here are your art work:</p>
+    <iframe width="560" height="315" src="<%= skits[0].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </body>
 </html>

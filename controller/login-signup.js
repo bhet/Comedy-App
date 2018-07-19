@@ -12,7 +12,7 @@ module.exports = {
     res.render('signup')
   },
 
-  
+
 
   protectedLogin: function(req, res){
     knex('skits').where('artist_id', req.session.comedian.id)
@@ -25,7 +25,7 @@ module.exports = {
     knex('artists').where('email', req.body.email)
     .then((result)=>{
       let comedian = result[0];
-      console.log("Comedian ", comedian);
+      
       if(comedian.password === req.body.password){
         req.session.comedian = comedian;
         req.session.save(()=>{
