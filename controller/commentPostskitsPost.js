@@ -6,10 +6,13 @@ module.exports = {
   },
 
   getComedypage: function(req, res){
-    knex('comments').where('skit_id', req.body.id)
+    knex('skits').where('id', req.params.id)
     .then((result)=>{
-      res.render('artPostpage', {comment: result})
+      knex('comments').where()
     })
+
+
+        res.render('artPostpage', {comment: result, skit: data[0]})
 
   }
 }
