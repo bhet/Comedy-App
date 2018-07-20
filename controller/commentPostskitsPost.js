@@ -31,8 +31,9 @@ postSkit: function(req, res){
   knex('skits').insert({
     title: req.body.title,
     video_url: req.body.video_url,
-    artist_id: req.session.comedian.artist_id
+    artist_id: req.session.comedian.id
   }).then(()=>{
+    console.log("Session: ", req.session.comedian);
     res.redirect('/comedian')
   })
 }

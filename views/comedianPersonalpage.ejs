@@ -11,12 +11,21 @@
         <a class="navbar-brand" href="#">WebSiteName</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active" style="margin-right: 30em;"><a href="/home">Home</a></li>
-        <li class="active" style="margin-right: 30em; width: 10em;"><a href="/skitpost">Post Your Arts Here</a></li>
+        <li class="active" style="margin-right: 10em;"><a href="/home">Home</a></li>
+        <li class="active" style="margin-right: 10em; width: 10em;"><a href="/skitpost">Post Your Arts Here</a></li>
+        <li class="active" style=""><a href="/home">Log out</a></li>
       </ul>
     </nav>
     <h1><%=comedian.fullname%>, Welcome to the Comedy World!</h1>
-    <p>Here are your art work:</p>
-    <iframe width="560" height="315" src="<%= skits[0].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <p>Here are your art work</p>
+    <%for(let i = 0; i < skits.length; i++){%>
+      <div class="">
+        <h5><%=skits[i].title%></h5>
+        <iframe width="560" height="315" src="<%= skits[i].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    <%}%>
+
+
+
   </body>
 </html>
