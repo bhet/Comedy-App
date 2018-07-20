@@ -74,4 +74,28 @@ li {
   ;
 }
 
-.sign-up {}
+.index {
+  margin-bottom: 40px;
+}
+
+.about {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  /* background-color: pink; */
+
+  /* background: url(https://images.alphacoders.com/244/thumb-1920-2443.jpg) no-repeat; */
+  /* background-size: cover; */
+}
+
+.george {
+  margin-top: 1em;
+  border: 1px solid black;
+
+  text-align: center;
+  width: 50%;
+}
+
+.duty {
+  font-size: 3em;
+}
