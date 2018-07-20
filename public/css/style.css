@@ -1,40 +1,41 @@
-body{
+body {
   margin: auto;
-
 }
 
 .navbar {
   display: flex;
   background-color: green;
   height: 5em;
-
-
-
 }
-.navbar-header{
+
+.navbar-header {
   display: flex;
   align-items: center;
   justify-content: ;
   margin-left: 2em;
-  margin-top:25px;
-}
-.nav li{
-  margin-top:10px;
+  margin-top: 25px;
 }
 
-.navbar-right{
-  flex:1;
+.nav li {
+  margin-top: 34px;
 }
 
-.navbar-nav{
+.navbar-right {
+  flex: 1;
+}
+
+.navbar-nav {
   display: flex;
   text-align: center;
 }
-ul {
-  list-style-type: none;
 
+ul {
+  display: flex;
+  /* justify-content: center; */
+  list-style-type: none;
 }
-a{
+
+a {
   text-decoration: none;
   width: 3em;
   color: white;
@@ -45,19 +46,14 @@ a{
   justify-content: center;
 }
 
-
-
-li{
-  justify-content: center;
-  flex:1;
+li {
+  justify-content: flex-end;
+  flex: 1;
 }
 
-.glyphicon{
-
+.glyphicon {
   padding-right: 5em;
 }
-
-
 
 .start-up p {
   font-size: 30pt;
@@ -73,9 +69,9 @@ li{
 }
 
 .skit-div {
-  margin-left: 1em;;
+  margin-top: 1em;
+  margin-left: 1em;
+  ;
 }
 
-.sign-up {
-  
-}
+.sign-up {}
