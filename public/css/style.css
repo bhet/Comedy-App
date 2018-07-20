@@ -4,7 +4,7 @@ body {
 
 .navbar {
   display: flex;
-  background-color: green;
+  background-color: black;
   height: 5em;
 }
 
@@ -79,23 +79,36 @@ li {
 }
 
 .about {
-  height: 800px;
+  height: 1000px;
   display: flex;
   justify-content: center;
-  /* background-color: pink; */
+  background: url(https://images.alphacoders.com/244/thumb-1920-2443.jpg) repeat; */
+  background-size: cover;
 
-  /* background: url(https://images.alphacoders.com/244/thumb-1920-2443.jpg) no-repeat; */
-  /* background-size: cover; */
 }
 
 .george {
   margin-top: 1em;
   border: 1px solid black;
-
   text-align: center;
   width: 50%;
+  background-color: #fcdcdc;
+  padding: 1em;
 }
 
 .duty {
-  font-size: 3em;
+  font-size: 4em;
+}
+
+.para {
+  margin: .5em;
+  padding-top: 0em;
+  font-size: 2em;
+}
+
+ {
+  font-size: 20pt;
+}
+.launch {
+  font-size: 1.5em;
 }
