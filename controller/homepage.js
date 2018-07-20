@@ -9,9 +9,9 @@ module.exports = {
     })
   },
 
-  getComment: function(req, res){
-    res.render('skitsComment')
-  },
+  // getComment: function(req, res){
+  //   res.render('skitsComment')
+  // },
 
   getComedy: function(req, res){
     res.render('home')

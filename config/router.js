@@ -8,11 +8,11 @@ module.exports = function(app){
   app.get('/home', homepage.getHomePage);
 
 // route for comment page, where anomyous can post comment.
-  app.get(`/comment/:skit_id`, commentSkits.getComment)
+  app.get(`/comment/id`, commentSkits.getComment)
 
 
   //route for website information: what is about and why it exist and for whom
-  app.get('/comedy', homepage.getComedy);
+  app.get('/comedy', homepage.getComedy); // About us
 
 
   // route for login and signup action_page
@@ -29,7 +29,7 @@ module.exports = function(app){
 
   app.post('/register/comedian', loginSignup.createComedianProfile)
 
-  app.get('/comedy', commentSkits.getComedypage);
+  app.get('/skitpost', commentSkits.getComedypage);
 }
 
 function protectlogin(req, res, next){
