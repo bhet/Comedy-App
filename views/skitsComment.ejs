@@ -7,5 +7,20 @@
   <body>
     <h1>As a viewer you can comment on our Artis work</h1>
     <iframe width="560" height="315" src="<%= skit.video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    <div class="comment">
+      <h5>Comment</h5>
+      <form class="" action="/skit/comment/<%= skit.id %>" method="post">
+      <input type="text" name="comment" value="" style="width: 20em; height:8em;">
+      <button type="submit" name="button">Submit</button>
+      </form>
+    </div>
+
+    <%for(let i = 0; i < comment.length; i++){%>
+      <div class="">
+        <p><%=comment[i].comment%></p>
+      </div>
+    <%}%>
+
   </body>
 </html>

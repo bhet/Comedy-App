@@ -8,7 +8,8 @@ module.exports = function(app){
   app.get('/home', homepage.getHomePage);
 
 // route for comment page, where anomyous can post comment.
-  app.get(`/comment/id`, commentSkits.getComment)
+  app.get(`/comment/:id`, commentSkits.getComment);
+  app.post('/skit/comment/:skit_id', commentSkits.postComment);
 
 
   //route for website information: what is about and why it exist and for whom
@@ -19,17 +20,19 @@ module.exports = function(app){
 
   app.get('/login', loginSignup.getLogin);
   app.get('/signup', loginSignup.getSignup);
+  app.post(`/comedian`, loginSignup.createLoginPost);
 
   //post request route from  login page that takes to Comedian Personal page.
   app.use(protectlogin);
   app.get(`/comedian`, loginSignup.protectedLogin);
-  app.post(`/comedian`, loginSignup.createLoginPost);
+
 
   //post router from signup page to singned up individual action_page
 
   app.post('/register/comedian', loginSignup.createComedianProfile)
 
   app.get('/skitpost', commentSkits.getComedypage);
+  app.post('/comedian/skit', commentSkits.postSkit);
 }
 
 function protectlogin(req, res, next){
