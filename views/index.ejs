@@ -19,7 +19,7 @@
       </div>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="/comedy">Home</a></li>
+      <li class="active"><a href="/comedy">About Us</a></li>
       <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
@@ -29,18 +29,11 @@
     <%for(let i = 0; i < skits.length; i++){%>
       <div class="skit-div">
         <iframe width="560" height="315" src="<%= skits[i].video_url%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <h4><%=skits[i].title%></h4>
-        <a href="/comment/<%= skits[i].id %>">
-          <%=skits[i].title%>
-        </a>
+        <a href="/comment/<%= skits[i].id %>" style="color:green;"><%=skits[i].title%></a>
       </div>
       <%}%>
   </div>
 
-
-
-
-  </iframe>
 </body>
 
 </html>
